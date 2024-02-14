@@ -1,0 +1,7 @@
+#! /bin/bash
+#This script will do the equivalent of pipesort -s4 -l10 
+#unfortunately the repetitions counts are right justified in a 8 byte field
+# Challenge: Write a pipeline better than mine!
+
+grep -o '[[:alpha:]]*' |tr '[:upper:]' '[:lower:]'  |grep -v -E '^.{,4}$' |grep -v ^.$ |cut -c1-10   |sort |uniq -c
+

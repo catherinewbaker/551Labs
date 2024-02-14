@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww9960\viewh8640\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs26 \cf0 Comments and Code Comprehension:\
+Code has comments describing the flow of work. These are meant to be read as you follow the code from top to bottom. Processes are labeled in order of execution (1, 2, 3 or A, B, C), but due to while loops and other processes, some numbers or letters may be skipped to complete the program.\
+\
+Errors and Shortcomings:\
+My program only receives an 96% on the test program provided. Reportedly this is due to test fails on the following tests:\
+\
+A. Good Faith - use sbrk(), no malloc/free\
+B. Exact - Magic number\
+C. Robustness - malloc(0)\
+\
+My arguments for points and explanations of error on the above tests are as follows:\
+\
+A. For the good faith tests, I do use sbrk() and I do not use malloc or free, despite the test fail.\
+B. For the Exact test of magic number, I do use a number (int) to monitor the allocation/deallocation of memory in each node. This is shown in my setChunkHead() function and used in the my_free() function for checking.\
+C. Additionally I am confident my_malloc(0) returns a chunk of size 16 minimally, so I am not sure why this test was failed or what the preferred return would be.\
+\
+Thank you!}
